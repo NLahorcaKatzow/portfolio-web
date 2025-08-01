@@ -46,7 +46,7 @@ const Header = () => {
               href="#top" 
               className="text-xl font-bold text-theme-title hover:text-theme-accent transition-colors duration-200"
             >
-              NG
+              LNK
             </a>
           </div>
 

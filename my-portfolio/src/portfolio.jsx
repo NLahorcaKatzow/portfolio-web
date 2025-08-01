@@ -175,7 +175,7 @@ export default function Portfolio() {
           Lahorca Nicolas
         </Animation.SplitText>
         <Typography.h3 className="text-2xl md:text-3xl mb-12 font-medium text-theme-accent">
-          Desarrollador de videojuegos SSr en C# / Unity
+          Desarrollador de videojuegos SSr <br /> en C# / Unity
         </Typography.h3>
 
         <ProfileCard
@@ -184,7 +184,7 @@ export default function Portfolio() {
           handle="LahorcaKatzow"
           status="Online"
           contactText="Contact Me"
-          avatarUrl="https://reactbits.dev/assets/person.png"
+          avatarUrl="https://github.com/NLahorcaKatzow/portfolio-web/blob/main/my-portfolio/src/assets/pngaaa.com-734189.png?raw=true"
           showUserInfo={true}
           enableTilt={true}
           behindGradient= "radial-gradient(circle,rgba(42, 55, 155, 1) 0%, rgba(147, 87, 199, 1) 51%, rgba(83, 101, 237, 1) 100%)"
@@ -205,11 +205,11 @@ export default function Portfolio() {
       <Section id="sobre-mi" title="Sobre mí">
         <Animation.ScrollReveal>
           <Typography.p className="max-w-3xl mx-auto leading-relaxed text-lg text-theme-text-secondary">
-          <p>Soy un programador de 22 años con experiencia en el desarrollo de videojuegos, especialmente en el ámbito de los MMO y RTS, áreas en las que he trabajado durante varios años.</p>
-
-<p>Actualmente, compagino mis estudios con el trabajo, lo que me permite seguir aprendiendo y perfeccionando mis habilidades.</p>
-
-<p>Me considero un jugador de equipo, siempre dispuesto a colaborar y aportar en proyectos grupales. Además, tengo un buen ojo para el arte, lo que me permite entender y valorar los aspectos visuales de un juego, contribuyendo a que la experiencia sea más atractiva para los jugadores.</p>
+          <p> Actualmente, Soy un programador de 22 años con experiencia en el desarrollo de videojuegos, especialmente en el ámbito de los MMO y RTS, áreas en las que he trabajado durante varios años.
+          <br /> Actualmente, compagino mis estudios con el trabajo, lo que me permite seguir aprendiendo y perfeccionando mis habilidades.
+          <br /> Me considero un jugador de equipo, siempre dispuesto a colaborar y aportar en proyectos grupales. Además, tengo un buen ojo para el arte, lo que me permite entender y valorar los aspectos visuales de un juego, contribuyendo a que la experiencia sea más atractiva para los jugadores.
+          <br /> Me gusta mucho el desarrollo de juegos, y me encanta la parte de diseño de mecánicas y sistemas.
+          </p>
           </Typography.p>
         </Animation.ScrollReveal>
       </Section>
