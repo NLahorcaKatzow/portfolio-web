@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globales que requieran react-bits o mvpblocks */
+@import "@david-hdev/react-bits/dist/style.css";
+@import "mvpblocks/dist/style.css";
