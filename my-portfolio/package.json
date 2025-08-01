@@ -11,6 +11,7 @@
 		"build:registry": "jsrepo build"
 	},
 	"dependencies": {
+		"@emailjs/browser": "^4.4.1",
 		"@react-three/fiber": "^9.3.0",
 		"gsap": "^3.13.0",
 		"lucide-react": "^0.535.0",

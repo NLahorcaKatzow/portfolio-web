@@ -4,6 +4,7 @@
 import React from "react";
 import { useTheme } from "./contexts/ThemeContext.jsx";
 import Header from "./components/Header.jsx";
+import ContactForm from "./components/ContactForm.jsx";
 import {
   Background,
   ProfileCard,
@@ -37,15 +38,7 @@ const projects = [
     buttonText: "Ver en Itch.io"
   },
   {
-    id: 2,
-    title: "Elixir Beta",
-    description: "Elixir Beta es un juego de rol 2D en el que tomamos el papel de un farmacéutico encargado de curar a los pacientes que llegan con diversos problemas de salud. Este juego fue desarrollado durante una game jam, lo que le dio un toque creativo y experimental en su jugabilidad.",
-    image: "https://img.itch.zone/aW1nLzk0NzU2NzAucG5n/original/7YEBZF.png",
-    link: "https://nicolaslahorca.itch.io/elixirbeta",
-    buttonText: "Ver en Itch.io"
-  },
-  {
-    id: 2,
+    id: 3,
     title: "Elixir Beta",
     description: "Elixir Beta es un juego de rol 2D en el que tomamos el papel de un farmacéutico encargado de curar a los pacientes que llegan con diversos problemas de salud. Este juego fue desarrollado durante una game jam, lo que le dio un toque creativo y experimental en su jugabilidad.",
     image: "https://img.itch.zone/aW1nLzk0NzU2NzAucG5n/original/7YEBZF.png",
@@ -62,7 +55,10 @@ const jobs = [
     dates: "2025‑Actualidad",
     bullets: [
       "Becado por la UTN FRBA.",
-      "Prototipé y buildee un proyecto a WebGL."
+      "Prototipé y buildee un proyecto a WebGL.",
+"Diseñé moodboards y arte conceptual.",
+"Diseñé elevator pitch para varios proyectos.",
+"Diseñé mecanicas inovadoras esenciales para proyectos RTS"
     ]
   },
   {
@@ -209,7 +205,11 @@ export default function Portfolio() {
       <Section id="sobre-mi" title="Sobre mí">
         <Animation.ScrollReveal>
           <Typography.p className="max-w-3xl mx-auto leading-relaxed text-lg text-theme-text-secondary">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet consectetur dolor in elementum. Nulla facilisi. Morbi feugiat, mauris at luctus tincidunt, libero ipsum tristique leo, eu varius enim augue ac turpis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent non feugiat nisl. Vivamus venenatis consequat sapien, sed lobortis urna consequat vitae. Integer ipsum odio, malesuada semper commodo non, varius quis massa. Integer eu fermentum risus. Quisque ut odio nec arcu bibendum ultricies.
+          <p>Soy un programador de 22 años con experiencia en el desarrollo de videojuegos, especialmente en el ámbito de los MMO y RTS, áreas en las que he trabajado durante varios años.</p>
+
+<p>Actualmente, compagino mis estudios con el trabajo, lo que me permite seguir aprendiendo y perfeccionando mis habilidades.</p>
+
+<p>Me considero un jugador de equipo, siempre dispuesto a colaborar y aportar en proyectos grupales. Además, tengo un buen ojo para el arte, lo que me permite entender y valorar los aspectos visuales de un juego, contribuyendo a que la experiencia sea más atractiva para los jugadores.</p>
           </Typography.p>
         </Animation.ScrollReveal>
       </Section>
@@ -285,22 +285,79 @@ export default function Portfolio() {
 
       {/* ---- Contacto ---- */}
       <Section id="contacto" title="Contacto">
-        <div className="max-w-2xl mx-auto">
-          <MeshyCard title="¿Te interesa colaborar?" subtitle="Estoy disponible para proyectos freelance y oportunidades laborales">
-            <Layout.Flex direction="col" align="center" gap="6">
-              <Typography.p className="text-lg text-theme-text-secondary text-center">
-                ¿Te interesa colaborar o contratarme? Hablemos sobre tu proyecto.
-              </Typography.p>
-              <Button.Primary as="a" href="mailto:correo@example.com">
-                Enviar correo
-              </Button.Primary>
-              <div className="flex gap-4 justify-center">
-                <Icon.Github as="a" href="<GITHUB_LINK>" label="GitHub" />
-                <Icon.LinkedIn as="a" href="<LINKEDIN_LINK>" label="LinkedIn" />
-                <Icon.Game as="a" href="<ITCHIO_PROFILE>" label="Itch.io" />
-              </div>
-            </Layout.Flex>
-          </MeshyCard>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Información de contacto y redes sociales */}
+            <MeshyCard title="Conectemos" subtitle="Sígueme en redes sociales o envíame un mensaje directo">
+              <Layout.Flex direction="col" align="start" gap="8">
+                <div className="w-full">
+                  <Typography.h4 className="text-lg font-semibold text-theme-title mb-4">
+                    Redes Sociales
+                  </Typography.h4>
+                  <div className="grid grid-cols-2 gap-6">
+                    <Icon.Github 
+                      as="a" 
+                      href="https://github.com/NLahorcaKatzow" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      label="GitHub" 
+                    />
+                    <Icon.LinkedIn 
+                      as="a" 
+                      href="https://www.linkedin.com/in/nicolas-lahorca/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      label="LinkedIn" 
+                    />
+                    <Icon.Game 
+                      as="a" 
+                      href="https://nicolaslahorca.itch.io/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      label="Itch.io" 
+                    />
+                    <Icon.Instagram 
+                      as="a" 
+                      href="https://www.instagram.com/lnk_rk/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      label="Instagram" 
+                    />
+                  </div>
+                </div>
+                
+                <div className="w-full">
+                  <Typography.h4 className="text-lg font-semibold text-theme-title mb-4">
+                    Contacto Directo
+                  </Typography.h4>
+                  <Typography.p className="text-theme-text-secondary mb-6">
+                    ¿Prefieres escribirme directamente? No dudes en enviarme un email:
+                  </Typography.p>
+                  <Button.Primary as="a" href="mailto:nicolaslahorca@gmail.com" className="w-full md:w-auto">
+                    nicolas.lahorca.k@gmail.com
+                  </Button.Primary>
+                </div>
+                
+                <div className="w-full">
+                  <Typography.h4 className="text-lg font-semibold text-theme-title mb-4">
+                    Disponibilidad
+                  </Typography.h4>
+                  <Typography.p className="text-theme-text-secondary mb-4">
+                    Actualmente estoy disponible para:
+                  </Typography.p>
+                  <ul className="list-disc list-inside text-theme-text-secondary space-y-2">
+                    <li>Proyectos freelance de desarrollo de juegos</li>
+                    <li>Colaboraciones en estudios de videojuegos Part-Time y Full-Time</li>
+                  </ul>
+                </div>
+              </Layout.Flex>
+            </MeshyCard>
+
+            {/* Formulario de contacto */}
+            <MeshyCard title="Envíame un mensaje" subtitle="Cuéntame sobre tu proyecto o consulta">
+              <ContactForm />
+            </MeshyCard>
+          </div>
         </div>
       </Section>
 
