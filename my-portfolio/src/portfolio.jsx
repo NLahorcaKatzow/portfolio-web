@@ -3,6 +3,7 @@
 
 import React from "react";
 import { useTheme } from "./contexts/ThemeContext.jsx";
+import Header from "./components/Header.jsx";
 import {
   Background,
   ProfileCard,
@@ -21,41 +22,103 @@ import {
 const projects = [
   {
     id: 1,
-    title: "Galactic Drift",
-    description: "Racer 3D procedural tracks generado en tiempo real.",
-    image: "https://via.placeholder.com/300x200",
-    link: "<ITCHIO_LINK_1>" // TODO
+    title: "Splitwars Online",
+    description: "Splitwars Online es un juego de estrategia por turnos en 2D isométrico, disponible para PC y dispositivos móviles. Los jugadores lideran flotas espaciales, entrenan capitanes y diseñan tácticas para conquistar y expandir su dominio en una galaxia llena de batallas épicas y aventuras.",
+    image: "https://splitwars.com/images/part2_img3.png",
+    link: "https://splitwars.com/",
+    buttonText: "Ver pagina principal"
   },
   {
     id: 2,
-    title: "Pixel Dungeon+",
-    description: "Roguelike 2D con IA dinámica de enemigos.",
-    image: "https://via.placeholder.com/300x200",
-    link: "<ITCHIO_LINK_2>" // TODO
+    title: "Volta",
+    description: "Volta es un juego de puzzles donde el jugador debe resolver diferentes desafios utilizando la mente y un numero reducido de movimientos.",
+    image: "https://img.itch.zone/aW1nLzIyNDM5ODEyLnBuZw==/105x83%23/60eHUJ.png",
+    link: "https://nicolaslahorca.itch.io/volta",
+    buttonText: "Ver en Itch.io"
+  },
+  {
+    id: 2,
+    title: "Elixir Beta",
+    description: "Elixir Beta es un juego de rol 2D en el que tomamos el papel de un farmacéutico encargado de curar a los pacientes que llegan con diversos problemas de salud. Este juego fue desarrollado durante una game jam, lo que le dio un toque creativo y experimental en su jugabilidad.",
+    image: "https://img.itch.zone/aW1nLzk0NzU2NzAucG5n/original/7YEBZF.png",
+    link: "https://nicolaslahorca.itch.io/elixirbeta",
+    buttonText: "Ver en Itch.io"
+  },
+  {
+    id: 2,
+    title: "Elixir Beta",
+    description: "Elixir Beta es un juego de rol 2D en el que tomamos el papel de un farmacéutico encargado de curar a los pacientes que llegan con diversos problemas de salud. Este juego fue desarrollado durante una game jam, lo que le dio un toque creativo y experimental en su jugabilidad.",
+    image: "https://img.itch.zone/aW1nLzk0NzU2NzAucG5n/original/7YEBZF.png",
+    link: "https://nicolaslahorca.itch.io/elixirbeta",
+    buttonText: "Ver en Itch.io"
   }
 ];
 
 const jobs = [
   {
     id: 1,
-    role: "Gameplay Programmer",
-    company: "Indie Studio XYZ",
-    dates: "2023‑2025",
+    role: "Tecnicatura Universitaria en Desarrollo y Produccion de Videojuegos (Educación)",
+    company: "UTN FRBA",
+    dates: "2025‑Actualidad",
     bullets: [
-      "Implementé sistema de pooling reduciendo GC un 80 %.",
-      "Migré proyecto URP → HDRP mejorando iluminación."
+      "Becado por la UTN FRBA.",
+      "Prototipé y buildee un proyecto a WebGL."
     ]
   },
   {
     id: 2,
+    role: "Unity Developer MMO RTS (FullTime)",
+    company: "MoodStudios ",
+    dates: "2023‑2025",
+    bullets: [
+      "Desarrollé mecánicas esenciales de un MMO RTS, incluyendo implementación de PVE, sistema de construcción, diseño de entidades, gestión de recursos, entre otras.",
+      "Estuve a cargo de un pequeño equipo en amplias instancias de desarrollo.",
+      "Optimicé el rendimiento para garantizar una experiencia fluida en múltiples dispositivos.",
+      "Realicé pruebas de compatibilidad en diversas plataformas.",
+      "Colaboré en el diseño de UI/UX, facilitando una navegación intuitiva.",
+      "Creé un sistema dinámico de gestión de recursos en tiempo real.",
+      "Reduje los tiempos de carga y mejoré las transiciones entre pantallas.",
+      "Proporcioné soporte post-lanzamiento, solucionando problemas y manteniendo actualizaciones."
+    ]
+  },
+  {
+    id: 3,
+    role: "Ingenieria Electronica (Educación)",
+    company: "UTN FRA",
+    dates: "2021‑Actualidad",
+    bullets: [
+      "Implementé codigo C de bajo nivel en sistemas embebidos.",
+      "Optimicé el rendimiento de código en microcontroladores, mejorando la eficiencia en recursos limitados.",
+      "Diseñé y simulé circuitos electrónicos para aplicaciones prácticas utilizando herramientas como LTspice y Proteus.",
+      "Desarrollé soluciones en tiempo real para sistemas embebidos, garantizando respuestas rápidas y precisas."
+    ]
+  },
+{
+    id: 4,
     role: "Unity Developer (Freelance)",
-    company: "Mobile Fun Co.",
+    company: "Freelance",
     dates: "2021‑2023",
     bullets: [
-      "Publicados 4 títulos (>500 k descargas).",
-      "Integré IAP y analíticas en tiempo récord."
+      "Creé prototipos de juegos premium: Desarrollé conceptos innovadores para experiencias single-player con mecánicas únicas.",
+      "Implementé sistemas de elecciones e interacciones para experiencias narrativas inmersivas.",
+      "Implementé físicas realistas para mejorar la jugabilidad.",
+      "Mejoré interfaces y mecánicas de juego para un flujo más intuitivo.",
+      "Prototipé mecánicas de juegos bullet hell, novelas visuales, narrativos, entre otras.",
+      "Colaboré con equipos multidisciplinarios: Trabajé junto a diseñadores, artistas y musicos para crear experiencias cohesivas."
     ]
-  }
+  },
+{
+    id: 5,
+    role: "Musico de orquesta (Educación)",
+    company: "OEFV",
+    dates: "2018‑2025",
+    bullets: [
+      "Colaboré en la ejecución de conciertos en vivo",
+      "Mantuve disciplina y ensayo constante",
+      "Fomenté el trabajo en equipo",
+      "Colaboré en la creación de piezas musicales"
+    ]
+  },
 ];
 
 const awards = [
@@ -74,15 +137,14 @@ const awards = [
 ];
 
 const skills = [
-  "Unity 2022 LTS",
-  "C# / DOTS",
-  "URP & HDRP",
-  "ShaderGraph",
+  "Unity Engine",
+  "C# / C",
   "Addressables",
+  "Online Multiplayer",
+  "RTS gameplay",
   "Git / GitHub Actions",
   "CI/CD",
-  "AR Foundation",
-  "FMOD"
+  "Backend Integration"
 ];
 
 // ---- Components ----
@@ -101,34 +163,40 @@ export default function Portfolio() {
   const { isDark } = useTheme();
   
   return (
-    <Background.Silk
-      speed={5}
-      scale={1}
-      color="#9285C7"
-      noiseIntensity={1.5}
-      rotation={0}
-    >
-      {/* ---- Hero ---- */}
-      <div id="top" className="min-h-screen flex flex-col items-center justify-center text-center text-theme-text px-4">
+    <>
+      <Header />
+      <Background.Silk
+        speed={3}
+        scale={0.7}
+        color="#7B7481" // Color por defecto, será reemplazado por --color-background
+        noiseIntensity={1.5}
+        rotation={0}
+        themeKey={isDark ? "dark" : "light"}
+      >
+              {/* ---- Hero ---- */}
+        <div id="top" className="min-h-screen flex flex-col items-center justify-center text-center text-theme-text px-4 pt-16">
         <Animation.SplitText as="h1" words className="text-5xl md:text-6xl font-extrabold mb-8 text-theme-title">
-          Nombre Genérico
+          Lahorca Nicolas
         </Animation.SplitText>
         <Typography.h3 className="text-2xl md:text-3xl mb-12 font-medium text-theme-accent">
-          Desarrollador de videojuegos en C# / Unity
+          Desarrollador de videojuegos SSr en C# / Unity
         </Typography.h3>
 
         <ProfileCard
-          name="Nombre Genérico"
+          name="Lahorca Nicolas"
           title="Unity Game Developer"
-          handle="unitydev"
+          handle="LahorcaKatzow"
           status="Online"
           contactText="Contact Me"
           avatarUrl="https://reactbits.dev/assets/person.png"
           showUserInfo={true}
           enableTilt={true}
+          behindGradient= "radial-gradient(circle,rgba(42, 55, 155, 1) 0%, rgba(147, 87, 199, 1) 51%, rgba(83, 101, 237, 1) 100%)"
+          innerGradient = "radial-gradient(circle,rgba(42, 55, 155, 0) 0%, rgba(147, 87, 199, 0.3) 51%, rgba(83, 101, 237, 0.4) 100%)"
+          showBehindGradient={true}
           enableMobileTilt={false}
           onContactClick={() => console.log('Contact clicked')}
-          iconUrl="C:\Users\nicol\OneDrive\Documentos\portfolio web\my-portfolio\src\assets\iconpattern.png"
+          iconUrl="https://raw.githubusercontent.com/NLahorcaKatzow/portfolio-web/main/my-portfolio/src/assets/iconpattern.png"
           grainUrl="https://reactbits.dev/assets/grain.webp"
         />
 
@@ -150,7 +218,7 @@ export default function Portfolio() {
       <Section id="skills" title="Tech Stack & Skills">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {skills.map((skill) => (
-            <Animation.AnimatedContent key={skill} className="flex items-center justify-center p-4 bg-theme-surface rounded-lg border border-theme-border">
+            <Animation.AnimatedContent key={skill} className="flex items-center justify-center p-4 bg-theme-surface/80 backdrop-blur-md rounded-lg border border-theme-border hover:bg-theme-surface/90 transition-all duration-200">
               <Typography.span className="text-sm font-semibold text-theme-text-secondary">
                 {skill}
               </Typography.span>
@@ -159,27 +227,7 @@ export default function Portfolio() {
         </div>
       </Section>
 
-      {/* ---- Proyectos Destacados ---- */}
-      <Section id="proyectos" title="Proyectos Destacados">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((proj) => (
-            <FlipCard key={proj.id} frontContent={<img src={proj.image} alt={proj.title} className="w-full h-full object-cover" />} backContent={
-              <div className="flex flex-col items-center justify-center p-6 h-full bg-theme-surface text-theme-text-secondary">
-                <Typography.h4 className="text-lg font-bold mb-2 text-theme-accent">
-                  {proj.title}
-                </Typography.h4>
-                <Typography.p className="text-sm text-center mb-4">
-                  {proj.description}
-                </Typography.p>
-                <Button.Primary as="a" href={proj.link} target="_blank" rel="noopener noreferrer">
-                  Ver en Itch.io
-                </Button.Primary>
-              </div>
-            } />
-          ))}
-        </div>
-      </Section>
-
+      
       {/* ---- Experiencia Profesional ---- */}
       <Section id="experiencia" title="Experiencia Profesional & Educación">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -195,7 +243,29 @@ export default function Portfolio() {
         </div>
       </Section>
 
-      {/* ---- Reconocimientos & Certificaciones ---- */}
+{/* ---- Proyectos Destacados ---- */}
+<Section id="proyectos" title="Proyectos Destacados y mecanicas destacadas">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {projects.map((proj) => (
+            <FlipCard key={proj.id} frontContent={<img src={proj.image} alt={proj.title} className="w-full h-full object-cover" />} backContent={
+              <div className="flex flex-col items-center justify-center p-6 h-full bg-theme-surface text-theme-text-secondary">
+                <Typography.h4 className="text-lg font-bold mb-2 text-theme-accent">
+                  {proj.title}
+                </Typography.h4>
+                <Typography.p className="text-sm text-center mb-4">
+                  {proj.description}
+                </Typography.p>
+                <Button.Primary as="a" href={proj.link} target="_blank" rel="noopener noreferrer">
+                  {proj.buttonText}
+                </Button.Primary>
+              </div>
+            } />
+          ))}
+        </div>
+      </Section>
+
+
+      {/* ---- Reconocimientos & Certificaciones ---- 
       <Section id="premios" title="Reconocimientos & Certificaciones">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {awards.map((award) => (
@@ -211,29 +281,34 @@ export default function Portfolio() {
             } />
           ))}
         </div>
-      </Section>
+      </Section>*/}
 
       {/* ---- Contacto ---- */}
       <Section id="contacto" title="Contacto">
-        <Layout.Flex direction="col" align="center" gap="4">
-          <Typography.p className="text-lg text-theme-text-secondary">
-            ¿Te interesa colaborar o contratarme? Hablemos.
-          </Typography.p>
-          <Button.Primary as="a" href="mailto:correo@example.com">
-            Enviar correo
-          </Button.Primary>
-          <Layout.Flex gap="4" justify="center">
-            <Icon.Github as="a" href="<GITHUB_LINK>" label="GitHub" />
-            <Icon.LinkedIn as="a" href="<LINKEDIN_LINK>" label="LinkedIn" />
-            <Icon.Game as="a" href="<ITCHIO_PROFILE>" label="Itch.io" />
-          </Layout.Flex>
-        </Layout.Flex>
+        <div className="max-w-2xl mx-auto">
+          <MeshyCard title="¿Te interesa colaborar?" subtitle="Estoy disponible para proyectos freelance y oportunidades laborales">
+            <Layout.Flex direction="col" align="center" gap="6">
+              <Typography.p className="text-lg text-theme-text-secondary text-center">
+                ¿Te interesa colaborar o contratarme? Hablemos sobre tu proyecto.
+              </Typography.p>
+              <Button.Primary as="a" href="mailto:correo@example.com">
+                Enviar correo
+              </Button.Primary>
+              <div className="flex gap-4 justify-center">
+                <Icon.Github as="a" href="<GITHUB_LINK>" label="GitHub" />
+                <Icon.LinkedIn as="a" href="<LINKEDIN_LINK>" label="LinkedIn" />
+                <Icon.Game as="a" href="<ITCHIO_PROFILE>" label="Itch.io" />
+              </div>
+            </Layout.Flex>
+          </MeshyCard>
+        </div>
       </Section>
 
       {/* ---- Footer ---- */}
       <footer className="py-8 text-center text-xs text-theme-text-secondary">
-        © {new Date().getFullYear()} Nombre Genérico — Portfolio creado con React Bits & MVPBlocks.
+        © {new Date().getFullYear()} Lahorca Nicolas — Portfolio creado con React Bits & MVPBlocks.
       </footer>
-    </Background.Silk>
+      </Background.Silk>
+    </>
   );
 }

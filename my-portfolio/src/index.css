@@ -1,13 +1,14 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* Variables CSS para tema oscuro */
 :root {
-  --color-background-dark: rgb(6,0,16);
+  --color-background-dark: #524f88;
   --color-surface-dark: rgba(255,255,255,0.05);
   --color-text-dark: #ffffff;
   --color-text-secondary-dark: rgba(255,255,255,0.7);
   --color-title-dark: #ffffff;
-  --color-accent-dark: rgb(125,93,253);
+  --color-accent-dark: rgb(212, 203, 248);
   --color-border-dark: rgba(255,255,255,0.1);
   
   /* Variables CSS para tema claro */
@@ -56,6 +57,21 @@
 
 .border-theme-border {
   border-color: var(--color-border);
+}
+
+/* Configuración de fuente */
+* {
+  font-family: 'Figtree', sans-serif;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset para secciones con header fijo */
+section[id] {
+  scroll-margin-top: 4rem;
 }
 
 /* Transiciones suaves para cambios de tema */

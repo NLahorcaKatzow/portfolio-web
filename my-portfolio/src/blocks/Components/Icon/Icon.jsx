@@ -7,7 +7,7 @@ const BaseIcon = ({
   label,
   ...props 
 }) => {
-  const iconClasses = `inline-flex items-center justify-center w-10 h-10 rounded-full bg-theme-surface hover:bg-theme-surface/80 border border-theme-border transition-colors duration-200 ${className}`;
+  const iconClasses = `inline-flex items-center justify-center w-10 h-10 rounded-full bg-theme-surface/80 backdrop-blur-md hover:bg-theme-surface/90 border border-theme-border transition-all duration-200 ${className}`;
 
   if (as === "a") {
     return (

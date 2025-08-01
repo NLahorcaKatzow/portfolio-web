@@ -6,7 +6,7 @@ const FlipCard = ({ frontContent, backContent, className = "" }) => {
 
   return (
     <div 
-      className={`flip-card w-full h-64 ${className}`}
+      className={`flip-card w-full h-64 bg-theme-surface/80 backdrop-blur-md border border-theme-border rounded-lg overflow-hidden ${className}`}
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
