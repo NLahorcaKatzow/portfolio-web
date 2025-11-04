@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../contexts/ThemeContext';
+import logoImg from '../assets/logo.png';
 
 const Header = () => {
   const { isDark } = useTheme();
@@ -44,7 +45,7 @@ const Header = () => {
           <div className="flex-shrink-0">
             <a 
               href="#top" 
-              className="text-xl font-bold text-theme-title hover:text-theme-accent transition-colors duration-200"
+              className="block px-3 py-2 text-theme-text hover:text-theme-accent hover:bg-theme-surface/50 rounded-md transition-colors duration-200 font-bold"
             >
               LNK
             </a>

@@ -178,41 +178,89 @@ export default function Portfolio() {
           Desarrollador de videojuegos SSr <br /> en C# / Unity
         </Typography.h3>
 
-        <ProfileCard
-          name="Lahorca Nicolas"
-          title="Unity Game Developer"
-          handle="LahorcaKatzow"
-          status="Online"
-          contactText="Contact Me"
-          avatarUrl="https://github.com/NLahorcaKatzow/portfolio-web/blob/main/my-portfolio/src/assets/Fondo.png?raw=true"
-          showUserInfo={true}
-          enableTilt={true}
-          behindGradient= "radial-gradient(circle,rgba(42, 55, 155, 1) 0%, rgba(147, 87, 199, 1) 51%, rgba(83, 101, 237, 1) 100%)"
-          innerGradient = "radial-gradient(circle,rgba(42, 55, 155, 0) 0%, rgba(147, 87, 199, 0.3) 51%, rgba(83, 101, 237, 0.4) 100%)"
-          showBehindGradient={true}
-          enableMobileTilt={false}
-          onContactClick={() => console.log('Contact clicked')}
-          iconUrl="https://raw.githubusercontent.com/NLahorcaKatzow/portfolio-web/main/my-portfolio/src/assets/iconpattern.png"
-          grainUrl="https://reactbits.dev/assets/grain.webp"
-        />
+        {/* Contenedor lado a lado: ProfileCard y Sobre mí */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl w-full mb-8">
+          {/* ProfileCard */}
+          <div className="flex justify-center items-start">
+            <ProfileCard
+              name="Lahorca Nicolas"
+              title="Unity Game Developer"
+              handle="LahorcaKatzow"
+              status="Online"
+              contactText="Contact Me"
+              avatarUrl="https://github.com/NLahorcaKatzow/portfolio-web/blob/main/my-portfolio/src/assets/Fondo.png?raw=true"
+              showUserInfo={true}
+              enableTilt={true}
+              behindGradient= "radial-gradient(circle,rgba(42, 55, 155, 1) 0%, rgba(147, 87, 199, 1) 51%, rgba(83, 101, 237, 1) 100%)"
+              innerGradient = "radial-gradient(circle,rgba(42, 55, 155, 0) 0%, rgba(147, 87, 199, 0.3) 51%, rgba(83, 101, 237, 0.4) 100%)"
+              showBehindGradient={true}
+              enableMobileTilt={false}
+              onContactClick={() => window.open('https://www.linkedin.com/in/nicolas-lahorca/', '_blank')}
+              iconUrl="https://raw.githubusercontent.com/NLahorcaKatzow/portfolio-web/main/my-portfolio/src/assets/iconpattern.png"
+              grainUrl="https://reactbits.dev/assets/grain.webp"
+            />
+          </div>
 
-        <Button.Ghost as="a" href="#contacto" className="mt-10 text-theme-text border-theme-border">
+          {/* Sobre mí */}
+          <div id="sobre-mi" className="flex flex-col justify-center text-left px-4">
+            <Typography.h2 className="text-3xl font-bold text-theme-accent mb-6">
+              Sobre mí
+            </Typography.h2>
+            <Animation.ScrollReveal>
+              <Typography.p className="leading-relaxed text-base text-theme-text-secondary">
+                Actualmente, Soy un programador de 22 años con experiencia en el desarrollo de videojuegos, especialmente en el ámbito de los MMO y RTS, áreas en las que he trabajado durante varios años.
+                <br /><br />
+                Actualmente, compagino mis estudios con el trabajo, lo que me permite seguir aprendiendo y perfeccionando mis habilidades.
+                <br /><br />
+                Me considero un jugador de equipo, siempre dispuesto a colaborar y aportar en proyectos grupales. Además, tengo un buen ojo para el arte, lo que me permite entender y valorar los aspectos visuales de un juego, contribuyendo a que la experiencia sea más atractiva para los jugadores.
+                <br /><br />
+                Me gusta mucho el desarrollo de juegos, y me encanta la parte de diseño de mecánicas y sistemas.
+              </Typography.p>
+            </Animation.ScrollReveal>
+          </div>
+        </div>
+
+        {/* Botón de contacto */}
+        <Button.Ghost as="a" href="#contacto" className="mt-6 text-theme-text border-theme-border">
           Contacto directo
         </Button.Ghost>
-      </div>
 
-      {/* ---- Sobre mí ---- */}
-      <Section id="sobre-mi" title="Sobre mí">
-        <Animation.ScrollReveal>
-          <Typography.p className="max-w-3xl mx-auto leading-relaxed text-lg text-theme-text-secondary">
-          <p> Actualmente, Soy un programador de 22 años con experiencia en el desarrollo de videojuegos, especialmente en el ámbito de los MMO y RTS, áreas en las que he trabajado durante varios años.
-          <br /> Actualmente, compagino mis estudios con el trabajo, lo que me permite seguir aprendiendo y perfeccionando mis habilidades.
-          <br /> Me considero un jugador de equipo, siempre dispuesto a colaborar y aportar en proyectos grupales. Además, tengo un buen ojo para el arte, lo que me permite entender y valorar los aspectos visuales de un juego, contribuyendo a que la experiencia sea más atractiva para los jugadores.
-          <br /> Me gusta mucho el desarrollo de juegos, y me encanta la parte de diseño de mecánicas y sistemas.
-          </p>
-          </Typography.p>
-        </Animation.ScrollReveal>
-      </Section>
+        {/* Social Media Hotbar */}
+        <div className="flex gap-4 justify-center mt-6">
+          <Icon.Github 
+            as="a" 
+            href="https://github.com/NLahorcaKatzow" 
+            target="_blank"
+            rel="noopener noreferrer"
+            label="GitHub"
+            className="w-10 h-10 p-0"
+          />
+          <Icon.LinkedIn 
+            as="a" 
+            href="https://www.linkedin.com/in/nicolas-lahorca/" 
+            target="_blank"
+            rel="noopener noreferrer"
+            label="LinkedIn"
+            className="w-10 h-10 p-0"
+          />
+          <Icon.Game 
+            as="a" 
+            href="https://nicolaslahorca.itch.io/" 
+            target="_blank"
+            rel="noopener noreferrer"
+            label="Itch.io"
+            className="w-10 h-10 p-0"
+          />
+          <Icon.Instagram 
+            as="a" 
+            href="https://www.instagram.com/lnk_rk/" 
+            target="_blank"
+            rel="noopener noreferrer"
+            label="Instagram"
+            className="w-10 h-10 p-0"
+          />
+        </div>
+      </div>
 
       {/* ---- Tech Stack & Skills ---- */}
       <Section id="skills" title="Tech Stack & Skills">
