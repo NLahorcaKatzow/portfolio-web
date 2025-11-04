@@ -386,16 +386,16 @@ export default function Portfolio() {
                   </Button.Primary>
                 </div>
                 
-                <div className="w-full">
-                  <Typography.h4 className="text-lg font-semibold text-theme-title mb-4">
+                <div className="w-full bg-gradient-to-br from-theme-accent/20 to-theme-accent/10 border-2 border-theme-accent/40 rounded-lg p-6 shadow-lg backdrop-blur-sm">
+                  <Typography.h4 className="text-lg font-semibold text-theme-accent mb-4">
                     Disponibilidad
                   </Typography.h4>
-                  <Typography.p className="text-theme-text-secondary mb-4">
+                  <Typography.p className="text-theme-text mb-4 font-medium">
                     Actualmente estoy disponible para:
                   </Typography.p>
-                  <ul className="list-disc list-inside text-theme-text-secondary space-y-2">
-                    <li>Proyectos freelance de desarrollo de juegos</li>
-                    <li>Colaboraciones en estudios de videojuegos Part-Time y Full-Time</li>
+                  <ul className="list-disc list-inside text-theme-text space-y-2 ml-2">
+                    <li className="font-medium">Proyectos freelance de desarrollo de juegos</li>
+                    <li className="font-medium">Colaboraciones en estudios de videojuegos Part-Time y Full-Time</li>
                   </ul>
                 </div>
               </Layout.Flex>
@@ -411,7 +411,7 @@ export default function Portfolio() {
 
       {/* ---- Footer ---- */}
       <footer className="py-8 text-center text-xs text-theme-text-secondary">
-        © {new Date().getFullYear()} Lahorca Nicolas — Portfolio creado con React Bits & MVPBlocks.
+        © {new Date().getFullYear()} Lahorca Nicolas.
       </footer>
       </Background.Silk>
     </>
