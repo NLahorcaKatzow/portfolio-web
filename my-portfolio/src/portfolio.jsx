@@ -243,7 +243,7 @@ export default function Portfolio() {
             label="LinkedIn"
             className="w-10 h-10 p-0"
           />
-          <Icon.Game 
+          <Icon.Itchio 
             as="a" 
             href="https://nicolaslahorca.itch.io/" 
             target="_blank"
@@ -357,7 +357,7 @@ export default function Portfolio() {
                       rel="noopener noreferrer"
                       label="LinkedIn" 
                     />
-                    <Icon.Game 
+                    <Icon.Itchio 
                       as="a" 
                       href="https://nicolaslahorca.itch.io/" 
                       target="_blank"
