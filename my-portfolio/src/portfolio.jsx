@@ -184,7 +184,7 @@ export default function Portfolio() {
           handle="LahorcaKatzow"
           status="Online"
           contactText="Contact Me"
-          avatarUrl="https://github.com/NLahorcaKatzow/portfolio-web/blob/main/my-portfolio/src/assets/pngaaa.com-734189.png?raw=true"
+          avatarUrl="https://github.com/NLahorcaKatzow/portfolio-web/blob/main/my-portfolio/src/assets/Fondo.png?raw=true"
           showUserInfo={true}
           enableTilt={true}
           behindGradient= "radial-gradient(circle,rgba(42, 55, 155, 1) 0%, rgba(147, 87, 199, 1) 51%, rgba(83, 101, 237, 1) 100%)"
